@@ -1,2 +1,26 @@
-<h1>Gossips#new</h1>
-<p>Find me in app/views/gossips/new.html.erb</p>
+<h1>Gossips THP</h1>
+<h2>Viens cracher sur tes potes</h2>
+
+<%= form_for @gossip, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+
+
+
+ <p><%= label_tag 'anonymous_author', "Auteur Anonyme "%><br>
+
+  <%= f.text_field :anonymous_author %></p>
+
+
+
+ <p><%= label_tag 'content', "Ton potin "%><br>
+
+  <%= f.text_area :content %></p>
+
+
+
+  <%= f.submit "C'est pas très sympa" %>
+
+
+
+<% end %>
+
+<%= link_to 'Revenir à la liste des Gossips', gossips_path %>

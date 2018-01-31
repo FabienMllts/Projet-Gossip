@@ -1,0 +1,8 @@
+<h1>Gossip #<%= @gossip.id %></h1>
+
+<strong>Anonyme: </strong><%= @gossip.anonymous_author %><br />
+<strong>Le Gossip: </strong><%= @gossip.content %><br /><br />
+
+
+<%= link_to 'Edit this gossip', edit_gossip_path %><br />
+<%= link_to 'Index Gossip', gossips_path %>

@@ -1,0 +1,17 @@
+<h1>Edit Gossip</h1>
+ 
+<%= form_for @gossip, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
+    
+ <p>   <%= label_tag 'anonymous_author', 'Nouveau nom :' %><br>
+ <%= f.text_field :anonymous_author %> </p>
+
+
+   <p> <%= label_tag 'content', 'Nouveau Potin :' %><br>
+ <%= f.text_area :content %></p>
+
+ <%= f.submit "Update" %>
+
+<% end %>
+
+ <p><%= link_to 'Detruire le Gossip', @gossip, method: :delete %></p>
+ <%= link_to 'Revenir à la liste des Gossips', gossips_path %>
